@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <style>
+    #sky {
+      padding-top: 0px;
+      height: 150px;
+  background: #99D8FF;
+}
+body {
+ background-color: #99D8FF;
+ padding: 60px;
+
+}
+      .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   font-family: 'Prompt', sans-serif;
+   text-align: left;
+   text-indent: 90px;
+      }
+   
+#pie {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate-reverse;  
+}
+      @keyframes example {
+  0%   {left:10px; top:10px;}
+  25%  {left:210px; top:10px;}
+  50%  {left:210px; top:210px;}
+  75%  {left:10px; top:210px;}
+  100% {left:10px; top:10px;}
+}
+input[type=text] {
+  width: 4%;
+  padding: 5px 5px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+
+</style></head>
+  <body>
+  <body onload="startCount()">
+    <div id="sky"> <img src="https://files.fm/thumb_show.php?i=67cktat69" style="height:150px; align="top">
+    </div>
+    <div id="pie container"><img src="https://files.fm/thumb_show.php?i=3ua5ametc" style="height:50%"
+id="pie" alt="Pie" title="Pie" onclick="stopCount();myFunction()"></div>
+      <div class="footer"><p>Time taken (seconds):<input class="w3-input w3-border-0" type="text" id="txt"></p>
+
+</div>
+    <script type="text/javascript">
+    function myFunction() {
+  alert("You got the pie!");
+  location.reload();
+  
+}
+var c = 0;
+var t;
+var timer_is_on = 0;
+
+function timedCount() {
+  document.getElementById("txt").value = c;
+  c = c + 1;
+  t = setTimeout(timedCount, 1000);
+}
+
+function startCount() {
+  if (!timer_is_on) {
+    timer_is_on = 1;
+    timedCount();
+  }
+}
+
+function stopCount() {
+  clearTimeout(t);
+  timer_is_on = 0;
+}
+</script>
+    
+        </script>
+      </body>
+      
+  
+</html>
